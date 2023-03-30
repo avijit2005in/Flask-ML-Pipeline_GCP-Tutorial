@@ -17,10 +17,10 @@ steps:
       - 'gcr.io/$PROJECT_ID/appcicd:latest'
       - '.'
   # Step 3: Push the docker image to the run
-  #- name: 'gcr.io/cloud-builders/docker'
-  #  args:
-  #    - 'push'
-  #    - 'gcr.io/$PROJECT_ID/appcicd'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/appcicd'
   # Step 4: Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
